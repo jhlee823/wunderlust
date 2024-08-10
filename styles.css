@@ -1,4 +1,5 @@
 /* Juhee Lee GIT414 Summer B */
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -48,3 +49,118 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Start of styles.css */
+/* Color palette var */
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* Typography */
+h1, h2, h3{
+    font-family: 'Molle', cursive;
+}
+h4, p, q, small, nav, button, form{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Skip link */
+#skip {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+  }
+  
+  #skip:focus {
+	position: static;
+	width: auto;
+	height: auto;
+  }
+
+/* Header styles */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    padding: 1em;
+    background-image: linear-gradient(var(--teal), var(--white));
+}
+
+header img {
+    width: 150px;
+}
+
+header h1 {
+    grid-column: 2/3;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    grid-column: 2/3;
+    font-size: 1.2em;
+}
+
+/* Hidden Menu */
+.sr-only {
+	visibility: hidden;
+}
+
+/* Nav link styles */
+#menu-toggle {
+    position: relative;
+    text-align: center;
+}
+
+#menu-toggle label {
+    background-color: var(--yellow);
+    padding: 0.5em 1em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#menu-toggle input {
+    display: none;
+}
+
+#menu-toggle ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--teal);
+    text-align: center;
+    list-style: none;
+}
+
+#menu-toggle input:checked + ul {
+    display: block;
+}
+
+#menu-toggle ul li {
+    padding: 1em;
+    border-bottom: 1px solid var(--black);
+}
+
+#menu-toggle ul li a {
+    display: block;
+    color: var(--white);
+    font-weight: bold;
+}
+
+#menu-toggle ul li.active a {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
