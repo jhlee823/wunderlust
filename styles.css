@@ -66,6 +66,7 @@ table {
 /* Global */
 
 body {
+    width: 100%;
     line-height: 1.6;
     font-size: 1rem;
     color: var(--dark-gray);
@@ -111,10 +112,9 @@ h4, p, q, small, nav, button, form{
 
 /* Header styles */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr .5fr;
     padding: 1em;
     background-image: linear-gradient(var(--teal), var(--white));
 }
@@ -126,6 +126,7 @@ header img {
 }
 
 h1 {
+    grid-column: 1 / -1;
     font-size: 50px;
     padding-left: 25px;
 }
@@ -134,11 +135,18 @@ header p {
     font-size: 20px;
     line-height: 1.5;
     padding: 10px 30px;
+    color: var(--black);
+    grid=columns: 1 / -1;
 }
 
 /* Hidden Menu */
 .sr-only {
-	visibility: hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 /* Nav link styles */
