@@ -64,6 +64,9 @@ table {
 }
 
 /* Global */
+* {
+    box-sizing: border-box;
+}
 
 body {
     width: 100%;
@@ -113,13 +116,15 @@ h4, p, q, small, nav, button, form{
 /* Header styles */
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr .5fr .5fr;
+    grid-template-columns: 22% 22% auto;
+    grid-template-rows: 22% auto 22%;
     padding: 1em;
     background-image: linear-gradient(var(--teal), var(--white));
 }
 
 header img {
+    grid-column-start: 1;
+    grid-column-end: 3;
     margin: 10px;
     height: auto;
     width: 50%;
@@ -136,7 +141,7 @@ header p {
     line-height: 1.5;
     padding: 10px 30px;
     color: var(--black);
-    grid=columns: 1 / -1;
+    grid-column: 1 / -1;
 }
 
 /* Hidden Menu */
@@ -150,16 +155,20 @@ header p {
 }
 
 /* Nav link styles */
-#menu-toggle {
+nav {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    top: 1em;
     position: relative;
-    text-align: center;
+    align-items: center;
+    justify-content: end;
 }
 
 #menu-toggle label {
     background-color: var(--yellow);
     padding: 0.5em 1em;
     cursor: pointer;
-    display: inline-block;
 }
 
 #menu-toggle input {
