@@ -63,33 +63,54 @@ table {
     --black: #000000;
 }
 
+/* Global */
+
+body {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
 /* Typography */
 h1, h2, h3{
     font-family: 'Molle', cursive;
+    font-size: italic;
 }
+
 h4, p, q, small, nav, button, form{
     font-family: 'Montserrat', sans-serif;
+    font-size: normal;
 }
 
 /* Skip link */
 #skip {
 	position: absolute;
-	left: -10000px;
-	top: auto;
+    background: var(--yellow);
+    color: var(--black);
+	left: 0;
+	top: -40px;
 	width: 1px;
-	height: 1px;
+	height: 10px;
+    padding: 1em 2em;
+    text-align: center;
 	overflow: hidden;
+    transform: translateY(-100%);
   }
   
   #skip:focus {
-	position: static;
-	width: auto;
-	height: auto;
+    position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 1.2em;
+	padding: 0.5em;
+	width: 10%;
+	height: 1.5em;
+    transform: translateY(0%);
   }
 
 /* Header styles */
 header {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; 
     padding: 1em;
