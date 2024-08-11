@@ -78,12 +78,12 @@ body {
 /* Typography */
 h1, h2, h3{
     font-family: 'Molle', cursive;
-    font-size: italic;
+    font-style: italic;
 }
 
 h4, p, q, small, nav, button, form{
     font-family: 'Montserrat', sans-serif;
-    font-size: normal;
+    font-style: normal;
 }
 
 /* Skip link */
