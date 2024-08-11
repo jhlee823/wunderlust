@@ -89,8 +89,8 @@ h4, p, q, small, nav, button, form{
     color: var(--black);
 	left: 0;
 	top: -400px;
-	width: 1px;
-	height: 10px;
+	width: auto;
+	height: auto;
     padding: 1em 2em;
     border: 2px solid;
     text-align: start;
@@ -100,6 +100,7 @@ h4, p, q, small, nav, button, form{
     font-weight: bold;
     overflow: hidden;
     z-index: 100;
+    transition: top 0.3s ease;
   }
   
   #skip:focus {
@@ -111,6 +112,9 @@ h4, p, q, small, nav, button, form{
 /* Header styles */
 header {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; 
     padding: 1em;
