@@ -88,24 +88,24 @@ h4, p, q, small, nav, button, form{
     background: var(--yellow);
     color: var(--black);
 	left: 0;
-	top: -40px;
+	top: -400px;
 	width: 1px;
 	height: 10px;
     padding: 1em 2em;
-    text-align: center;
-	overflow: hidden;
-    transform: translateY(-100%);
+    border: 2px solid;
+    text-align: start;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 100;
   }
   
   #skip:focus {
-    position: absolute;
-	top: 1em;
-	right: 1em;
-	font-size: 1.2em;
-	padding: 0.5em;
-	width: 10%;
-	height: 1.5em;
-    transform: translateY(0%);
+	top: 0;
+    border-color: var(--black);
+    outline: none;
   }
 
 /* Header styles */
